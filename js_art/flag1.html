@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flag</title>
+</head>
+<body>
+
+    <canvas width="600" height="400"></canvas>
+    <script>
+        
+        let canvas = document.querySelector('canvas');
+        let pen = canvas.getContext('2d');
+        
+        pen.fillStyle = 'lightgrey'
+        pen.fillRect(0,0, 600, 400);
+
+        pen.fillStyle = 'green';
+        pen.fillRect(0, 0, 200, 400);
+
+        pen.fillStyle = 'red'
+        pen.fillRect(400, 0, 200, 400);
+        
+        pen.fillStyle = 'yellow';
+        pen.beginPath();
+        pen.moveTo(300, 200);
+        pen.lineTo(200, 400);
+        pen.lineTo(400, 400);
+        pen.fill();
+        
+        pen.fillStyle = 'blue'
+        pen.beginPath();
+        pen.arc(300, 200, 50, 0, 2 * 3.14);
+        pen.fill();
+
+    </script>
+    
+</body>
+</html>
